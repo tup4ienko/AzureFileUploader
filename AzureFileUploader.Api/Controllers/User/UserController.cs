@@ -15,7 +15,7 @@ public class UserController : ControllerBase
         _sender = sender;
     }
     
-    [HttpPost("/upload-document")]
+    [HttpPost("upload-document")]
     public async Task<IActionResult> UploadDocument(
         [FromForm] UploadDocumentRequest request,
         CancellationToken cancellationToken)
@@ -23,13 +23,8 @@ public class UserController : ControllerBase
         var command = new UploadDocumentCommand(
             request.Email, request.Document);
         
-        var result = await _sender.Send(command, cancellationToken);
+        await _sender.Send(command, cancellationToken);
         
-        if (result.IsFailure)
-        {
-            return BadRequest(result.Error);
-        }
-
         return Ok();
     }
 }
