@@ -15,7 +15,7 @@ const App = () => {
             return agent.User.uploadFile(params);
         },
         onError: (err: Error) => {
-            toast.error(err.message)
+            toast.error(err.message);
         },
         onSuccess: () => {
             setOpenBannerAlert(false);
@@ -80,7 +80,7 @@ const App = () => {
                                     control={control}
                                     rules={{
                                         required: true,
-                                        // pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
+                                        pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
                                     }}
                                     render={({field}) => (
                                         <TextField
