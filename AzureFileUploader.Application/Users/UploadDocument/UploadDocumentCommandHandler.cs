@@ -4,7 +4,7 @@ using AzureFileUploader.Domain.Abstractions;
 
 namespace AzureFileUploader.Application.Users.UploadDocument;
 
-internal sealed class UploadDocumentCommandHandler : ICommandHandler<UploadDocumentCommand>
+public sealed class UploadDocumentCommandHandler : ICommandHandler<UploadDocumentCommand>
 {
     private readonly IBlobStorageService _blobStorageService;
 

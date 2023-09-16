@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Blobs;
+﻿using Azure;
+using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using AzureFileUploader.Application.Abstractions.BlobStorage;
 using Microsoft.AspNetCore.Http;
@@ -17,7 +18,7 @@ public sealed class BlobStorageService : IBlobStorageService
     }
 
     public async Task UploadBlobAsync(IFormFile formFile, BlobClient blobClient, 
-        IDictionary<string, string> metadata = null)
+        IDictionary<string, string> metadata)
     {
         using var memoryStream = new MemoryStream();
         await formFile.CopyToAsync(memoryStream);
