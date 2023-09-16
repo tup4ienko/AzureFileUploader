@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFileUploader.Api", "Az
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFileUploader.Functions", "AzureFileUploader.Functions\AzureFileUploader.Functions.csproj", "{DC80015E-F0F9-470A-A4AD-891F0E77C310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFileUploader.Application.UnitTests", "AzureFileUploader.Application.UnitTests\AzureFileUploader.Application.UnitTests.csproj", "{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFileUploader.Functions.UnitTests", "AzureFileUploader.Functions.UnitTests\AzureFileUploader.Functions.UnitTests.csproj", "{3257F7F1-0369-412C-83B2-F28BE9D4C322}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{DC80015E-F0F9-470A-A4AD-891F0E77C310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC80015E-F0F9-470A-A4AD-891F0E77C310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC80015E-F0F9-470A-A4AD-891F0E77C310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3257F7F1-0369-412C-83B2-F28BE9D4C322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3257F7F1-0369-412C-83B2-F28BE9D4C322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3257F7F1-0369-412C-83B2-F28BE9D4C322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3257F7F1-0369-412C-83B2-F28BE9D4C322}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +65,8 @@ Global
 		{3686CFD4-7397-45CA-9FA2-D3F6C8E7CDD2} = {65B61C73-45C6-44CC-BEAD-98CCE521526D}
 		{BFB1AB4E-C9E1-481B-81EA-2F419261D0B7} = {65B61C73-45C6-44CC-BEAD-98CCE521526D}
 		{DC80015E-F0F9-470A-A4AD-891F0E77C310} = {65B61C73-45C6-44CC-BEAD-98CCE521526D}
+		{A32FDA7B-58E9-4677-8E2D-8434B6FEA2AC} = {2A44B76A-4E42-402D-B9B9-6FA336882DD2}
+		{3257F7F1-0369-412C-83B2-F28BE9D4C322} = {2A44B76A-4E42-402D-B9B9-6FA336882DD2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A195094-9906-4BBA-A054-CFC5B6B5F029}
