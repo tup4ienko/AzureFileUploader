@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import {IUploadFileFormInputs} from "../../models/uploadFile.ts";
 
-axios.defaults.baseURL = ' http://127.0.0.1:5235/api';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
 axios.defaults.timeout = 10000
 
@@ -10,7 +10,6 @@ axios.interceptors.response.use(
         return response;
     },
     (error: AxiosError) => {
-
         return Promise.reject(error);
     },
 );
