@@ -8,14 +8,16 @@ namespace AzureFileUploader.Application.UnitTests.User;
 
 public class UploadDocumentTests
 {
+    private const string FileName = "test.docx";
+    private const string Email = "test@example.com";
+
     [Fact]
     public async Task Handle_UploadsDocumentSuccessfully()
     {
         // Arrange
-        var email = "test@example.com";
         var formFile = new Mock<IFormFile>();
-        formFile.Setup(f => f.FileName).Returns("test.doc");
-        var command = new UploadDocumentCommand(email, formFile.Object);
+        formFile.Setup(f => f.FileName).Returns(FileName);
+        var command = new UploadDocumentCommand(Email, formFile.Object);
 
         var blobStorageServiceMock = new Mock<IBlobStorageService>();
         blobStorageServiceMock.Setup(service => service.GetBlobClient(It.IsAny<string>()))
@@ -32,7 +34,7 @@ public class UploadDocumentTests
             service => service.UploadBlobAsync(
                 It.IsAny<IFormFile>(),
                 It.IsAny<BlobClient>(),
-                It.Is<Dictionary<string, string>>(data => data["email"] == email)),
+                It.Is<Dictionary<string, string>>(data => data["email"] == Email)),
             Times.Once);
     }
 }

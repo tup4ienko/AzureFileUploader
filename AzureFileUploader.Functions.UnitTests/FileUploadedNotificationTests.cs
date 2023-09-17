@@ -8,7 +8,7 @@ namespace AzureFileUploader.Functions.UnitTests;
 
 public class FileUploadedNotificationTests
 {
-    private const string FileName = "test.doc";
+    private const string FileName = "test.docx";
     private const string Email = "test@example.com";
 
     [Fact]
