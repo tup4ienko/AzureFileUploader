@@ -48,9 +48,9 @@ const App = () => {
     });
 
     const onSubmit: SubmitHandler<IUploadFileFormInputs> = async (data) => {
-        const allowedDocumentTypes = ["application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+        const allowedDocumentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
-        if (!data.document || !allowedDocumentTypes.includes(data.document.type)) {
+        if (!data.document || data.document.type !== allowedDocumentType) {
             setOpenBannerAlert(true);
         } else {
 
@@ -110,7 +110,7 @@ const App = () => {
                                         }
                                         sx={{mb: 2}}
                                     >
-                                        {filesContent.length === 0 ? "You need to upload a document" : "Documents must be in .doc or .docx format"}
+                                        {filesContent.length === 0 ? "You need to upload a document" : "Documents must be in .docx format"}
                                     </Alert>
                                 </Collapse>
 
