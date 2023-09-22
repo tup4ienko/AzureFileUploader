@@ -5,13 +5,13 @@ using MediatR;
 
 namespace AzureFileUploader.Application.Abstractions.Behaviors;
 
-public class ValidationBehaviour<TRequest, TResponse>
+public class ValidationBehavior<TRequest, TResponse>
     : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IBaseCommand
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 
-    public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
+    public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators)
     {
         _validators = validators;
     }

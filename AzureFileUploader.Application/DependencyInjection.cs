@@ -17,7 +17,7 @@ public static class DependencyInjection
             
             configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
 
-            configuration.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
         
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
